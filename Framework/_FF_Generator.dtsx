@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/18/2017 1:05:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PC-10846"
+  DTS:CreatorName="hilleshl"
+  DTS:DTSID="{9FB893AA-F58B-41E1-A2EF-93AC3F084837}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0900.75"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="_FF_Generator"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{036F294F-6506-41AD-8029-CABCA057240D}"
+  DTS:VersionMajor="0">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_ACD]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{760A4662-35F8-42E7-B7F2-30EF989A8180}"
+      DTS:ObjectName="FF_MD_ACD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\acd.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{89720EA0-4D81-4CCF-805F-6048603A5560}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{CC9DFA2B-6DD4-4503-89D8-AE0AD73B31C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{C426F0D9-0424-4A8A-80D4-85BD4725655F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_AGNAME]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B3B2EB58-4A2C-44EC-994B-F3A1D165778C}"
+      DTS:ObjectName="FF_MD_AGNAME">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\agname.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{02F9EE02-8484-4BAD-9C30-F5B985F9B2FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{DB880995-F754-4381-958E-59E770524035}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{85FF150F-86AF-43EE-B7A1-7E1963C8685A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_CWC]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{92CAC8C9-FEDF-4E0A-986E-54D34D35E2EA}"
+      DTS:ObjectName="FF_MD_CWC">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\cwc.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{A24A9BD2-F6F7-48BD-9DC9-457930C7A48A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{634304EB-CC1A-4482-9958-39F94D9C9F39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{891282AA-ADE1-4482-A586-813C60C88FE3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_SPLIT]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F636B00E-9570-4133-A875-348C708DC6C5}"
+      DTS:ObjectName="FF_MD_SPLIT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\split.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{B62EC611-B851-4DCE-BFA9-C3DACB59F7AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{393A5724-6FDA-4421-95FE-698D7F70BF17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{FFA44B82-35D5-4C7D-8797-D72D39609E37}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_TKGRP]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{00C7CBB3-3531-44F3-B4DC-BF1B600171BC}"
+      DTS:ObjectName="FF_MD_TKGRP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\tkgrp.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{4CD0FA04-3E38-4D09-9DA0-CB32EBE7E715}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{7FAF951C-5A0E-475A-B2CA-B76EAB917862}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{1B677832-DE11-4168-960F-B176E942FC17}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_VDN]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{90344122-D111-4CEC-AAFA-41E0CDC0A85C}"
+      DTS:ObjectName="FF_MD_VDN">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\vdn.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{2A721B48-8489-45B2-A7CC-66DC18B1C694}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{71111BB4-7059-493E-83AE-82B62906F3E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{2B8CEA68-47D0-435C-91EC-CC0C131C0EAF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_MD_VECTOR]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EAE94F9B-2BA2-4D48-97C4-A65FED8FE4FD}"
+      DTS:ObjectName="FF_MD_VECTOR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Hillesheim\Testdata\data_test\vector.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{F6328CA6-1989-44E1-A123-745F5FD741F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{7D56FA40-5F4E-4E00-A8FF-DE40714AA562}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{98B5A323-C2AD-437E-BC6B-533FFD3F52AE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_ACD"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{910121E9-BBE0-4488-8350-71E8473C1772}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_ACD"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_ACD\FF_MD_ACD"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_ACD"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_ACD\FF_MD_ACD.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_ACD]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_ACD]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_ACD\FF_MD_ACD.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_AGNAME"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{F06A990C-9297-4DFE-B1ED-8E87B048F428}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_AGNAME"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_AGNAME"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_AGNAME]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_AGNAME]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_AGNAME\FF_MD_AGNAME.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_CWC"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{038F408A-21BA-4209-9D17-6F051EF87B69}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_CWC"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_CWC\FF_MD_CWC"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_CWC"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_CWC\FF_MD_CWC.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_CWC]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_CWC]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_CWC\FF_MD_CWC.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_SPLIT"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{3FD5D76F-4EDD-428E-BD0E-6C37D5776A79}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_SPLIT"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_SPLIT"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_SPLIT]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_SPLIT]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_SPLIT\FF_MD_SPLIT.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_TKGRP"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{C8CBF76A-F0C1-424F-A22A-09422BD61D5F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_TKGRP"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_TKGRP"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_TKGRP]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_TKGRP]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_TKGRP\FF_MD_TKGRP.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_VDN"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{21CC822E-0DE6-486D-9F2D-D8C178502F23}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_VDN"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_VDN\FF_MD_VDN"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_VDN"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_VDN\FF_MD_VDN.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_VDN]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_VDN]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_VDN\FF_MD_VDN.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT Load MD_VECTOR"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{3239468D-A48E-4B4C-96CF-4AE1BCC45F22}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Load MD_VECTOR"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              localeId="1031"
+              name="FF_MD_VECTOR"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_MD_VECTOR]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_MD_VECTOR]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].ExternalColumns[Column 1]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].Columns[Column 1]"
+                      name="Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].ExternalColumns[Column 2]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].Columns[Column 2]"
+                      name="Column 2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].ExternalColumns[Column 3]"
+                      length="128"
+                      lineageId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Column 3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error]"
+                  isErrorOut="true"
+                  name="Error">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Load MD_VECTOR\FF_MD_VECTOR.Outputs[Error].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint_DFT Load MD_ACD_To_DFT Load MD_VDN]"
+      DTS:CreationName=""
+      DTS:DTSID="{DC6DCF82-31B3-49B7-AD77-20C9C3659577}"
+      DTS:From="Package\DFT Load MD_ACD"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint_DFT Load MD_ACD_To_DFT Load MD_VDN"
+      DTS:To="Package\DFT Load MD_VDN" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint_DFT Load MD_AGNAME_To_DFT Load MD_CWC]"
+      DTS:CreationName=""
+      DTS:DTSID="{426C106E-3F43-4909-868E-9EDD511EA6BB}"
+      DTS:From="Package\DFT Load MD_AGNAME"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint_DFT Load MD_AGNAME_To_DFT Load MD_CWC"
+      DTS:To="Package\DFT Load MD_CWC" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint_DFT Load MD_CWC_To_DFT Load MD_SPLIT]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE35C1AE-541C-4F9D-85CB-06E56D94166C}"
+      DTS:From="Package\DFT Load MD_CWC"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint_DFT Load MD_CWC_To_DFT Load MD_SPLIT"
+      DTS:To="Package\DFT Load MD_SPLIT" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint_DFT Load MD_SPLIT_To_DFT Load MD_TKGRP]"
+      DTS:CreationName=""
+      DTS:DTSID="{0EF1F7A1-4184-4BB6-83C3-8DE2F9747235}"
+      DTS:From="Package\DFT Load MD_SPLIT"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint_DFT Load MD_SPLIT_To_DFT Load MD_TKGRP"
+      DTS:To="Package\DFT Load MD_TKGRP" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint_DFT Load MD_VDN_To_DFT Load MD_VECTOR]"
+      DTS:CreationName=""
+      DTS:DTSID="{D40B0372-6B0F-4EDF-A9CD-60AEBC61D444}"
+      DTS:From="Package\DFT Load MD_VDN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint_DFT Load MD_VDN_To_DFT Load MD_VECTOR"
+      DTS:To="Package\DFT Load MD_VECTOR" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint_DFT Load MD_VECTOR_To_DFT Load MD_AGNAME]"
+      DTS:CreationName=""
+      DTS:DTSID="{70348A1B-94AA-48E2-B1BA-663CA4C65A45}"
+      DTS:From="Package\DFT Load MD_VECTOR"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint_DFT Load MD_VECTOR_To_DFT Load MD_AGNAME"
+      DTS:To="Package\DFT Load MD_AGNAME" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\DFT Load MD_ACD"
+          TopLeft="16.3,5.49999999999995" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\DFT Load MD_AGNAME"
+          TopLeft="5.50000000000004,310.3" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DFT Load MD_CWC"
+          TopLeft="15.1000000000001,411.9" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\DFT Load MD_SPLIT"
+          TopLeft="12.7000000000001,513.5" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\DFT Load MD_TKGRP"
+          TopLeft="10.3000000000001,615.099999999999" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\DFT Load MD_VDN"
+          TopLeft="15.9,107.1" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\DFT Load MD_VECTOR"
+          TopLeft="6.70000000000003,208.7" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint_DFT Load MD_ACD_To_DFT Load MD_VDN]"
+          TopLeft="100.3,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint_DFT Load MD_VDN_To_DFT Load MD_VECTOR]"
+          TopLeft="100.3,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint_DFT Load MD_VECTOR_To_DFT Load MD_AGNAME]"
+          TopLeft="100.3,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint_DFT Load MD_AGNAME_To_DFT Load MD_CWC]"
+          TopLeft="100.3,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint_DFT Load MD_CWC_To_DFT Load MD_SPLIT]"
+          TopLeft="100.3,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint_DFT Load MD_SPLIT_To_DFT Load MD_TKGRP]"
+          TopLeft="100.3,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT Load MD_TKGRP">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\DFT Load MD_TKGRP\FF_MD_TKGRP"
+          TopLeft="5.5,5.49999999999995" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

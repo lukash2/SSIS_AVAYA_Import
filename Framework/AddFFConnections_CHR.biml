@@ -1,0 +1,40 @@
+<#@ import namespace="Varigence.Hadron.CoreLowerer.SchemaManagement" #>
+<#@ import namespace="System.Data" #>
+<# var cnSql = SchemaManager.CreateConnectionNode("SchemaProvider", "Data Source=(local);Initial Catalog=AVAYA_TELEFON;Provider=SQLNCLI11.1;Integrated Security=SSPI;"); #>
+<Biml xmlns="http://schemas.varigence.com/biml.xsd">
+    
+    <FileFormats>
+		
+		<FlatFileFormat Name="ffChrFormat"  RowDelimiter="LF" FlatFileType="Delimited" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+			<Columns>
+				<# foreach ( DataRow Row in ExternalDataAccess.GetDataTable(cnSql,"select [name2], [data_type2] from [avaya].[chr_columns]").Rows ) { #>
+				        <Column 
+				            Name="<#=Row[0].ToString() #>" 
+				            ColumnType="Delimited" 
+				            DataType= "String" 
+				            Length="50" 
+				            Delimiter="|" ></Column>		           
+				<# } #>
+			</Columns>
+		</FlatFileFormat>
+		
+	</FileFormats>
+    
+    <Connections>
+        <FlatFileConnection Name="FF_chr"
+                FileFormat="ffChrFormat"
+                FilePath="C:\_BUM\Projekt\BTIS\Applications\BM-TKD-IS\TK_Import\chr0001.5" 
+                > 
+        </FlatFileConnection>          
+    </Connections>
+        
+    <Packages>
+            <Package Name="FF_Generator_CHR">
+                <Connections >
+                    <Connection ConnectionName="FF_chr" ></Connection>
+                </Connections>
+            </Package>
+                
+    </Packages>
+        
+</Biml>

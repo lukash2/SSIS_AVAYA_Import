@@ -1,0 +1,88 @@
+<#@ import namespace="Varigence.Hadron.CoreLowerer.SchemaManagement" #>
+<#@ import namespace="System.Data" #>
+<# var cnSql = SchemaManager.CreateConnectionNode("SchemaProvider", "Data Source=(local);Initial Catalog=AVAYA_TELEFON;Provider=SQLNCLI11.1;Integrated Security=SSPI;"); #>
+<# var selString = "select \n id \n , import_file_name \n , load_date \n ,row_pos \n ,"; 
+       foreach ( DataRow Row in ExternalDataAccess.GetDataTable(cnSql,"select [name2], [data_type2] from [avaya].[chr_columns]").Rows )  
+	    { selString += "[" + Row[0].ToString() + "_NVARCHAR] = [" + Row[0].ToString() + "],\n"; } 
+	   selString = selString.Substring(0,selString.Length -2); 
+       selString += "\n from [pstg].[step01_chr]"; #>
+<# string ssisCastExpr; #>
+<Biml xmlns="http://schemas.varigence.com/biml.xsd">
+    
+    <Connections>
+        <OleDbConnection Name="AVAYA_TELEFON" ConnectionString="Provider=SQLNCLI11;Server=localhost;Initial Catalog=AVAYA_TELEFON;Integrated Security=SSPI;"/>
+    </Connections>
+    <Databases>
+        <Database Name="AVAYA_TELEFON" ConnectionName="AVAYA_TELEFON" />
+    </Databases>
+    <Schemas>    
+        <Schema Name="pstg" DatabaseName="AVAYA_TELEFON" Owner="dbo"></Schema>
+    </Schemas>
+    <Tables>
+        <Table Name="step01_chr" SchemaName="AVAYA_TELEFON.pstg" >
+            <Columns>
+                <# foreach ( DataRow Row in ExternalDataAccess.GetDataTable(cnSql,"select [name2], [data_type2] from [avaya].[chr_columns]").Rows ) { #>
+				        <Column Name="<#=Row[0].ToString() + "_NCHAR" #>" ></Column>		   
+				<# } #>
+            </Columns>
+        </Table> 
+    </Tables>
+    
+    <Packages>
+            <Package Name="OledbSrc_Generator_CHR">
+                <Connections >
+                    <Connection ConnectionName="AVAYA_TELEFON" ></Connection>
+                </Connections>
+                
+                <Tasks>
+                    <Dataflow Name="Copy and Cast CHR">
+                        <Transformations>
+                            <OleDbSource Name="oledb_step01_chr" ConnectionName="AVAYA_TELEFON" >
+                                <DirectInput><#=selString#>
+                                </DirectInput>
+                            </OleDbSource>
+                            
+                            <DerivedColumns Name="Generate typed data">
+                            <Columns>
+                                <# foreach ( DataRow Row in ExternalDataAccess.GetDataTable(cnSql,"select [name2], [data_type3] from [avaya].[chr_columns]").Rows ) { #>
+				                    <Column Name="<#=Row[0].ToString() #>" DataType="<#=Row[1].ToString()#>" Length="50" >
+				                        
+				                        <# switch ( Row[1].ToString() )
+				                            {
+				                                case "Boolean": 
+				                                    ssisCastExpr = "(DT_BOOL)"; 
+				                                    break; 
+				                                case "Int32": 
+				                                    ssisCastExpr = "(DT_UI4)"; 
+				                                    break; 
+				                                case "Int16": 
+				                                    ssisCastExpr = "(DT_I2)"; 
+				                                    break; 
+				                                case "DateTime": 
+				                                    ssisCastExpr = "(DT_DBDATE)"; 
+				                                    break; 
+				                                default: 
+				                                    ssisCastExpr = "(DT_WSTR,50)"; 
+				                                    break; 
+				                            }
+				                        #>
+				                        
+				                        <#=ssisCastExpr#>[<#=Row[0].ToString() + "_NVARCHAR" #>]
+				                        
+				                    </Column>		   
+				                <# } #>
+                            </Columns>
+                        </DerivedColumns>
+                            
+                            <OleDbDestination Name="oledb_step03_chr" ConnectionName="AVAYA_TELEFON">
+                                 <ExternalTableOutput Table="pstg.step03_chr" />
+                            </OleDbDestination>
+                        </Transformations>
+                    </Dataflow>
+                </Tasks>    
+                    
+            </Package>
+                
+    </Packages>
+        
+</Biml>

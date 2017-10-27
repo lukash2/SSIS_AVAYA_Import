@@ -1,0 +1,164 @@
+<Biml xmlns="http://schemas.varigence.com/biml.xsd">
+ <FileFormats>
+        
+        <!-- FF_MD_ACD -->
+        <FlatFileFormat Name="FF_MD_ACD" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252"/>
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat>
+            
+        <!-- FF_MD_VDN -->
+        <FlatFileFormat Name="FF_MD_VDN" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat> 
+        
+        <!-- FF_MD_VECTOR -->
+        <FlatFileFormat Name="FF_MD_VECTOR" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat> 
+        
+        <!-- FF_MD_AGNAME -->
+        <FlatFileFormat Name="FF_MD_AGNAME" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat> 
+        
+        <!-- FF_MD_CWC -->
+        <FlatFileFormat Name="FF_MD_CWC" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat> 
+        
+        <!-- FF_MD_SPLIT -->
+        <FlatFileFormat Name="FF_MD_SPLIT" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat> 
+        
+        <!-- FF_MD_TKGRP -->
+        <FlatFileFormat Name="FF_MD_TKGRP" RowDelimiter="LF" ColumnNamesInFirstDataRow="false" IsUnicode="false">
+            <Columns>
+                <Column Name="Column 1" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 2" DataType="AnsiString" Length="128" Delimiter="|" CodePage="1252" />
+                <Column Name="Column 3" DataType="AnsiString" Length="128" Delimiter="CRLF" CodePage="1252" />
+            </Columns>
+        </FlatFileFormat> 
+            
+    </FileFormats>
+    
+	<Connections>
+	    
+	    <!-- FF_MD_ACD -->
+		<FlatFileConnection Name="FF_MD_ACD" FilePath="C:\Hillesheim\Testdata\data_test\acd.dat" FileFormat="FF_MD_ACD">
+		</FlatFileConnection>
+		    
+		<!-- FF_MD_VDN -->
+		<FlatFileConnection Name="FF_MD_VDN" FilePath="C:\Hillesheim\Testdata\data_test\vdn.dat" FileFormat="FF_MD_VDN">
+		</FlatFileConnection>    
+		
+		<!-- FF_MD_VECTOR -->
+		<FlatFileConnection Name="FF_MD_VECTOR" FilePath="C:\Hillesheim\Testdata\data_test\vector.dat" FileFormat="FF_MD_VECTOR">
+		</FlatFileConnection>    
+		
+		<!-- FF_MD_AGNAME -->
+		<FlatFileConnection Name="FF_MD_AGNAME" FilePath="C:\Hillesheim\Testdata\data_test\agname.dat" FileFormat="FF_MD_AGNAME">
+		</FlatFileConnection>    
+		
+		<!-- FF_MD_CWC -->
+		<FlatFileConnection Name="FF_MD_CWC" FilePath="C:\Hillesheim\Testdata\data_test\cwc.dat" FileFormat="FF_MD_CWC">
+		</FlatFileConnection>    
+		
+		<!-- FF_MD_SPLIT -->
+		<FlatFileConnection Name="FF_MD_SPLIT" FilePath="C:\Hillesheim\Testdata\data_test\split.dat" FileFormat="FF_MD_SPLIT">
+		</FlatFileConnection>    
+		
+		<!-- FF_MD_TKGRP -->
+		<FlatFileConnection Name="FF_MD_TKGRP" FilePath="C:\Hillesheim\Testdata\data_test\tkgrp.dat" FileFormat="FF_MD_TKGRP">
+		</FlatFileConnection>    
+		    
+	</Connections>
+	
+	<Packages>
+		<Package Name="FF_Generator_MD" ConstraintMode="Linear">
+			<Tasks>
+				
+				<!-- FF_MD_ACD -->
+				<Dataflow  Name="DFT Load MD_ACD">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_ACD" ConnectionName="FF_MD_ACD">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>
+				    
+				<!-- FF_MD_VDN -->
+				<Dataflow  Name="DFT Load MD_VDN">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_VDN" ConnectionName="FF_MD_VDN">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>
+				    
+				<!-- FF_MD_VECTOR -->
+				<Dataflow  Name="DFT Load MD_VECTOR">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_VECTOR" ConnectionName="FF_MD_VECTOR">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>
+				    
+				<!-- FF_MD_AGNAME -->
+				<Dataflow  Name="DFT Load MD_AGNAME">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_AGNAME" ConnectionName="FF_MD_AGNAME">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>
+				    
+				<!-- FF_MD_CWC -->
+				<Dataflow  Name="DFT Load MD_CWC">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_CWC" ConnectionName="FF_MD_CWC">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>
+				    
+				<!-- FF_MD_SPLIT -->
+				<Dataflow  Name="DFT Load MD_SPLIT">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_SPLIT" ConnectionName="FF_MD_SPLIT">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>
+				    
+				<!-- FF_MD_TKGRP -->
+				<Dataflow  Name="DFT Load MD_TKGRP">
+					<Transformations>
+						<FlatFileSource Name="FF_MD_TKGRP" ConnectionName="FF_MD_TKGRP">
+						</FlatFileSource>
+					</Transformations>
+				</Dataflow>                        
+				    
+			</Tasks>
+		</Package> 
+	</Packages>
+</Biml>

@@ -1,0 +1,25 @@
+<Biml xmlns="http://schemas.varigence.com/biml.xsd">
+
+    <Packages>
+        <Package Name="ETL_AVAYA_IMPORT_002" >
+            <Variables>
+                <Variable Name="vBdtAppRootFolder" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtImportSubFolder" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtImportFolder" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtImportFileFullpath" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtFtpSrvName" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtFtpUsrName" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtFtpUsrPw" DataType="String" >n/a</Variable>
+                <Variable Name="vBdtFtpSrvPort" DataType="Int32">-1</Variable>
+            </Variables>
+                
+            <Tasks>
+                
+               
+                
+            </Tasks>    
+                
+        </Package>
+    </Packages>
+    
+</Biml>
